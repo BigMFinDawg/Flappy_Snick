@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background: #6ec6f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', monospace, Arial, sans-serif;
+}
+#game-container {
+  position: relative;
+  width: 100vw;
+  max-width: 400px;
+  height: 100vh;
+  max-height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#gameCanvas {
+  display: block;
+  width: 100vw;
+  max-width: 400px;
+  height: auto;
+  aspect-ratio: 2/3;
+  background: #6ec6f7;
+  box-shadow: 0 0 20px #222, 0 0 0 8px #fff, 0 0 0 12px #222;
+  border-radius: 0;
+}
+#ui {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  pointer-events: none;
+}
+#score {
+  margin-top: 24px;
+  font-size: 2.5em;
+  color: gold;
+  text-shadow: 2px 2px 0 #000, 4px 4px 0 #222;
+  font-family: 'Press Start 2P', monospace, Arial, sans-serif;
+  z-index: 2;
+}
+#message {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2em;
+  color: #fff;
+  background: rgba(0,0,0,0.7);
+  padding: 16px 32px;
+  border: 4px solid #222;
+  border-radius: 8px;
+  text-align: center;
+  text-shadow: 2px 2px 0 #000, 4px 4px 0 #222;
+  font-family: 'Press Start 2P', monospace, Arial, sans-serif;
+  z-index: 3;
+  display: none;
+}
+@media (max-width: 500px) {
+  #game-container {
+    max-width: 100vw;
+    max-height: 100vh;
+  }
+  #gameCanvas {
+    max-width: 100vw;
+  }
+} 
